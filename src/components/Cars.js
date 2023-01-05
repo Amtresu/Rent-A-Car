@@ -14,7 +14,7 @@ const dispatch = useDispatch();
   }, []);
 
   return (
-  <div class="position-absolute top-0 start-50 translate-middle-x">
+  <div class="position-absolute top-0 start-50 translate-middle-x min-vh-100">
     <div className='test'>
         {cars.map((car) => (
           <Car
