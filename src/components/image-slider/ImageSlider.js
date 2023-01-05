@@ -14,7 +14,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "black" }}
+        style={{ ...style, display: "block", background: "#97BF0F" }}
         onClick={onClick}
       />
     );
@@ -25,7 +25,7 @@ function SampleNextArrow(props) {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "black" }}
+        style={{ ...style, display: "block", background: "#97BF0F" }}
         onClick={onClick}
       />
     );
@@ -38,7 +38,8 @@ function SampleNextArrow(props) {
           slidesToShow: 3,
           slidesToScroll: 3,
           autoplay: true,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 4000,
+          pauseOnHover: true,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />
         };
@@ -47,11 +48,33 @@ function SampleNextArrow(props) {
 
         <div className="main-slider">
         <h2 className="fw-bold home-text"> LATEST MODELS</h2>
+        <h4 className="text-muted fw-bold select-text ">Please Select Your Preferred Car Model</h4>
 
         <Slider {...settings}>
         <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+                <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="d-flex justify-content-between me-5 ms-5">
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                    <FaTwitter className="fa-brands"/>
+                    </a>
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                    <FaFacebook className="fa-brands"/>
+                    </a>
+                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                    <FaPinterest className="fa-brands"/>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <div class="card border-light" style="width: 15rem;">
+            <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
+            <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -69,6 +92,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -86,6 +111,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -103,6 +130,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -120,6 +149,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -137,6 +168,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -154,6 +187,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
@@ -171,23 +206,8 @@ function SampleNextArrow(props) {
             <div class="card border-light" style="width: 15rem;">
             <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
             <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="d-flex justify-content-between me-5 ms-5">
-                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                    <FaTwitter className="fa-brands"/>
-                    </a>
-                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                    <FaFacebook className="fa-brands"/>
-                    </a>
-                    <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                    <FaPinterest className="fa-brands"/>
-                    </a>
-                </div>
-            </div>
-            </div>
-            <div class="card border-light" style="width: 15rem;">
-            <img src="https://shorturl.at/bHO23" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <h5 class="card-title text-center">Car Name</h5>
+                <p class="text-muted fw-bold text-center">................................</p>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <div class="d-flex justify-content-between me-5 ms-5">
                     <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">

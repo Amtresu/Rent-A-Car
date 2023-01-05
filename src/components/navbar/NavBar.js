@@ -47,11 +47,21 @@ const NavBar = () => {
                 </div>
                 <div class="container-fluid mb-5">
                     <div class="d-flex justify-content-between me-5 ms-5">
+                        <a href="#" class="list-group-item list-group-item-action">
                         <FaTwitter className="fa-brands"/>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
                         <FaFacebook className="fa-brands" />
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action"> 
                         <FaGooglePlus className="fa-brands" />
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
                         <FaVimeoV  className="fa-brands" />
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
                         <FaPinterest className="fa-brands" />
+                        </a>
                     </div>
                     <div class="container mt-3 ms-3">
                             <h6 class="fa-text fw-bold">    
