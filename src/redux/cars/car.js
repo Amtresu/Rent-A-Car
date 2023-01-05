@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-const API = 'https://type.fit/api/quotes';
+const API = 'http://localhost:3000/cars';
 const initialState = [];
 const ADD_CAR = 'ADD_CAR'
 
@@ -13,9 +13,12 @@ const getCars = createAsyncThunk(ADD_CAR, async () => {
   try {
     const api = await data;
     item = api.map((car) => ({
-     key: car.id,
-     id: car.id,
-      author: car.author,
+      key: car.id,
+      id: car.id,
+      image: car.image,
+      description: car.description,
+      model: car.model,
+      mfgDate: car.manufacturing_date,
     }));
   } catch (error) {
     console.error('ERR', error);
@@ -26,8 +29,8 @@ const getCars = createAsyncThunk(ADD_CAR, async () => {
 export default (state = initialState, action) => {
   switch (action.type) {
     case `${ADD_CAR}/fulfilled`:
-      if(state == 0 )
-      return action.payload
+      if (state == 0)
+        return action.payload
     default:
       return state;
   }
