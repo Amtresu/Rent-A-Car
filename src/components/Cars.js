@@ -7,6 +7,7 @@ import Car from './Car';
 function Cars() {
 const dispatch = useDispatch();
   const cars = useSelector((state) => state.car)
+  let renderCars = cars.slice(0, 4);
   
   useEffect(() => {
     dispatch(getCars());
@@ -14,7 +15,7 @@ const dispatch = useDispatch();
 
   return (
     <div className='test'>
-        {cars.map((car) => (
+        {renderCars.map((car) => (
         <Car
           key={car.id}
           id={car.id}

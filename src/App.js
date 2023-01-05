@@ -1,7 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Cars from './components/Cars'
+import Cars from './components/Cars';
+import ReserveForm from './components/ReserveForm';
+
 
 import './App.css';
 
@@ -11,8 +13,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Cars />} />
+        <Route path="/reserve" element={<ReserveForm />} />
       </Routes>
-    
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.navigation {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    background-color: orange;
+}
