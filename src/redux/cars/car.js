@@ -15,7 +15,6 @@ const getCars = createAsyncThunk(ADD_CAR, async () => {
     item = api.map((car) => ({
      key: car.id,
      id: car.id,
-    //   id: mission.mission_id,
       author: car.author,
     }));
   } catch (error) {
