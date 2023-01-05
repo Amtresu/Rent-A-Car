@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { getCars } from '../redux/cars/car';
 import Car from './Car';
 
+
 function Cars() {
 const dispatch = useDispatch();
   const cars = useSelector((state) => state.car)
@@ -13,15 +14,17 @@ const dispatch = useDispatch();
   }, []);
 
   return (
+  <div class="fixed-top">
     <div className='test'>
         {cars.map((car) => (
-        <Car
+          <Car
           key={car.id}
           id={car.id}
           author={car.author}
           />
           ))}
     </div>
+          </div>
   );
 }
 
