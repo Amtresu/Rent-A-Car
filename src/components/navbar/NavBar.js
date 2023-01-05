@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/logo.png'
 
 
@@ -11,25 +12,25 @@ const NavBar = () => {
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
                     <img className="logo" src={Logo} alt="Logo rental call" />
 
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <NavLink to="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">CARS</span>
-                    </a>
+                    </NavLink>
 
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <NavLink to="/reserve" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">RESERVE</span>
-                    </a>
+                    </NavLink>
 
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <NavLink href="/reservations" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">MY RESERVATIONS</span>
-                    </a>
+                    </NavLink>
 
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <NavLink to="/add_car" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">ADD CAR</span>
-                    </a>
+                    </NavLink>
 
-                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <NavLink to="/delete_car" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
                     <span class="fs-5 d-none d-sm-inline">DELETE CAR</span>
-                    </a>
+                    </NavLink>
                 </div>
 
             </div>
