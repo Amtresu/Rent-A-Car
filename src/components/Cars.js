@@ -17,7 +17,7 @@ const dispatch = useDispatch();
   return (
   <div class="position-absolute top-0 start-50 translate-middle-x min-vh-100">
     <div className='test'>
-    {renderCars.map((car) => (
+        {renderCars.map((car) => (
         <Car
           key={car.id}
           id={car.id}

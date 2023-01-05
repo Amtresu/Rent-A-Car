@@ -11,6 +11,7 @@
   width: 220px;
   height: 220px;
   margin-left: -1rem;
+  margin-bottom: 3rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {

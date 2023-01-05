@@ -1,8 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 import Cars from './components/Cars'
+import NavBar from './components/navbar/NavBar';
 import ReserveForm from './components/ReserveForm';
+
 
 import './App.css';
 
