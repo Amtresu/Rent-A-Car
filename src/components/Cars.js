@@ -8,6 +8,7 @@ import Car from './Car';
 function Cars() {
 const dispatch = useDispatch();
   const cars = useSelector((state) => state.car)
+  let renderCars = cars.slice(0, 4);
   
   useEffect(() => {
     dispatch(getCars());
@@ -16,8 +17,8 @@ const dispatch = useDispatch();
   return (
   <div class="position-absolute top-0 start-50 translate-middle-x min-vh-100">
     <div className='test'>
-        {cars.map((car) => (
-          <Car
+        {renderCars.map((car) => (
+        <Car
           key={car.id}
           id={car.id}
           author={car.author}
