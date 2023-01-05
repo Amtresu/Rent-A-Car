@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { getCars } from '../redux/cars/car';
 import Car from './Car';
 
+
 function Cars() {
 const dispatch = useDispatch();
   const cars = useSelector((state) => state.car)
@@ -14,8 +15,9 @@ const dispatch = useDispatch();
   }, []);
 
   return (
+  <div class="fixed-top">
     <div className='test'>
-        {renderCars.map((car) => (
+    {renderCars.map((car) => (
         <Car
           key={car.id}
           id={car.id}
@@ -23,6 +25,7 @@ const dispatch = useDispatch();
           />
           ))}
     </div>
+          </div>
   );
 }
 
