@@ -14,7 +14,7 @@ const dispatch = useDispatch();
   }, []);
 
   return (
-  <div class="fixed-top">
+  <div class="position-absolute top-0 start-50 translate-middle-x">
     <div className='test'>
         {cars.map((car) => (
           <Car
