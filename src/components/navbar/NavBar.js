@@ -12,24 +12,24 @@ const NavBar = () => {
                 <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-dark min-vh-100">
                     <img className="logo" src={Logo} alt="Logo rental call" />
 
-                    <NavLink to="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">CARS</span>
+                    <NavLink to="/" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline nav-link ">CARS</span>
                     </NavLink>
 
-                    <NavLink to="/reserve" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">RESERVE</span>
+                    <NavLink to="/reserve" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline nav-link ">RESERVE</span>
                     </NavLink>
 
-                    <NavLink href="/reservations" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">MY RESERVATIONS</span>
+                    <NavLink to="/reservations" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline nav-link ">MY RESERVATIONS</span>
                     </NavLink>
 
-                    <NavLink to="/add_car" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">ADD CAR</span>
+                    <NavLink to="/add_car" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline nav-link">ADD CAR</span>
                     </NavLink>
 
-                    <NavLink to="/delete_car" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
-                    <span class="fs-5 d-none d-sm-inline">DELETE CAR</span>
+                    <NavLink to="/delete_car" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-dark  text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline nav-link">DELETE CAR</span>
                     </NavLink>
                 </div>
 
