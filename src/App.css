@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .logo {
   width: 220px;
   height: 220px;
@@ -24,6 +28,30 @@ a {
 
 .fa-text {
   font-size: 11px;
+}
+
+.homepage {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  max-width: 75%;
+}
+
+.main-slider {
+  max-width: 95%;
+  min-height: 20vh;
+  margin: auto;
+}
+
+.test{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.home-text {
+  text-align: center;
+  margin-bottom: 3rem;
+
 }
 
 

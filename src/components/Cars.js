@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getCars } from '../redux/cars/car';
 import Car from './Car';
+import ImageSlider from './image-slider/ImageSlider';
 
 
 function Cars() {
@@ -15,7 +16,8 @@ const dispatch = useDispatch();
   }, []);
 
   return (
-  <div class="position-absolute top-0 start-50 translate-middle-x min-vh-100">
+  <div className="container-fluid homepage">
+    <ImageSlider />
     <div className='test'>
         {renderCars.map((car) => (
         <Car
