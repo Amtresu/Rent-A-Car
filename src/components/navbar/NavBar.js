@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   FaTwitter, FaVimeoV, FaPinterest, FaFacebook, FaGooglePlus,
 } from 'react-icons/fa';
@@ -41,17 +41,6 @@ function NavBar() {
                 <NavLink to="/delete_car" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
                   <span className="fs-5 d-none d-sm-inline ms-4 fw-bold">DELETE CAR</span>
                 </NavLink>
-              </div>
-
-              <div className="dropdown mt-5 ms-3 me-3">
-                <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  User Details
-                </button>
-                <ul className="dropdown-menu dropdown-menu-dark">
-                  <li><Link to="/registrations" class="dropdown-item active">Registration Form</Link></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><Link to="/registrations" class="dropdown-item active">Registration Form</Link></li>
-                </ul>
               </div>
 
             </div>
