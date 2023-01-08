@@ -70,7 +70,7 @@ function Registration() {
 
                         <div className="divider d-flex align-items-center my-4">
                           <p className="text-center fw-bold mx-3 mb-0 text-muted">Have an Account</p>
-                          <Link to="/registrations" class="btn btn-primary">
+                          <Link to="/login" class="btn btn-primary">
                             Login
                           </Link>
                         </div>
