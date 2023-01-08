@@ -61,7 +61,12 @@ a {
   font-size: 18px;
 }
 
-
+.registration {
+  position: absolute;
+  top: 1%;
+  left: 20%;
+  max-width: 75%;
+}
 
 
 
