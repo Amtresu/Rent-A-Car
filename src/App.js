@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
 import Cars from './components/cars/Cars';
 import NavBar from './components/navbar/NavBar';
 import ReserveForm from './components/reservations/ReserveForm';
@@ -12,6 +13,10 @@ import DeleteCarForm from './components/reservations/DeleteCarForm';
 import './App.css';
 
 function App() {
+  // const user = useSelector((state) => state);
+  // console.log(user);
+
+  // const dispatch = useDispatch();
   return (
     <div className="App">
       <NavBar />
