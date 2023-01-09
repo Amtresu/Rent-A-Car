@@ -21,6 +21,8 @@ function Registration() {
     });
   };
 
+  console.log(state);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // handleUserLogIn(state);
@@ -53,7 +55,7 @@ function Registration() {
                             <input
                               type="text"
                               id="form3Example1c"
-                              name="name"
+                              name="username"
                               className="form-control"
                               onChange={handleChange}
                             />
@@ -113,7 +115,7 @@ function Registration() {
                         </div>
 
                         <div className="divider d-flex align-items-center ms-2 mb-2">
-                          <button type="button" className="btn btn-primary">Register</button>
+                          <button type="submit" className="btn btn-primary">Register</button>
                         </div>
 
                         <div className="divider d-flex align-items-center my-4">
