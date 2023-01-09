@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^14.4.3",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
+    "bullet": "^0.1.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-bootstrap-date-picker": "^5.1.0",
