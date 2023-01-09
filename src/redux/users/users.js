@@ -1,8 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const LOGIN_API = 'http://127.0.0.1:3000/login';
-const SIGN_UP_API = 'http://127.0.0.1:3000/signup';
+// const LOGIN_API = 'http://127.0.0.1:3000/login';
+const LOGIN_API = 'https://final-capstone-api.onrender.com/login';
+// const SIGN_UP_API = 'http://127.0.0.1:3000/signup';
+const SIGN_UP_API = 'https://final-capstone-api.onrender.com/signup';
 
 // const initialState = {};
 
@@ -43,7 +45,7 @@ export const userLogIn = createAsyncThunk(SIGN_IN, async (obj, { dispatch }) => 
       payload: data,
     });
     localStorage.setItem('userDetails', JSON.stringify(data.data.data));
-    console.log('Data: ', data.data.data);
+    // console.log('Data: ', data.data.data);
     return data;
   }).catch((error) => {
     const err = error;
