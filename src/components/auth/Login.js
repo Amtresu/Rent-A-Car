@@ -1,8 +1,30 @@
 /* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { userLogIn } from '../../redux/users/users';
 
 function Login() {
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+  });
+  const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  console.log(state);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(userLogIn(state));
+  };
+
   return (
     <section className="vh-100 log-in">
       <div className="container-fluid h-custom">
@@ -15,17 +37,19 @@ function Login() {
             />
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                 <p className="lead fw-normal mb-0 me-3 mb-2">Sign in</p>
               </div>
 
               <div className="form-outline mb-4">
                 <input
-                  type="Name"
+                  type="email"
+                  name="email"
                   id="form3Example3"
+                  onChange={handleChange}
                   className="form-control form-control-lg"
-                  placeholder="Enter a valid Username"
+                  placeholder="Enter a valid email"
                 />
                 <label className="form-label" htmlFor="form3Example3">Username</label>
               </div>
@@ -33,6 +57,8 @@ function Login() {
               <div className="form-outline mb-3">
                 <input
                   type="password"
+                  name="password"
+                  onChange={handleChange}
                   id="form3Example4"
                   className="form-control form-control-lg"
                   placeholder="Enter password"
@@ -59,7 +85,7 @@ function Login() {
                 </button>
                 <p className="small fw-bold mt-2 pt-1 mb-0 ms-1">
                   Don&apos;t have an account?
-                  <Link to="/registrations" class="btn btn-primary ms-3">
+                  <Link to="/registrations" className="btn btn-primary ms-3">
                     Register
                   </Link>
                 </p>
