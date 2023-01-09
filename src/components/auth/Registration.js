@@ -19,11 +19,11 @@ function Registration() {
     });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // handleUserLogIn(state);
-  //   dispatch(userSignUp(state));
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // handleUserLogIn(state);
+    dispatch(userSignUp(state));
+  };
 
   return (
     <div className="registration">
