@@ -1,3 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/no-unstable-nested-components */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/style-prop-object */
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -54,7 +60,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -73,7 +79,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -92,7 +98,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -111,7 +117,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -130,7 +136,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -149,7 +155,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -168,7 +174,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -187,7 +193,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
@@ -206,7 +212,7 @@ function ImageSlider() {
           <div className="card-body">
             <h5 className="card-title text-center">Car Name</h5>
             <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
             <div className="d-flex justify-content-between me-5 ms-5">
               <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
                 <FaTwitter className="fa-brands" />
