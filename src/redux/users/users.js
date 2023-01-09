@@ -10,18 +10,24 @@ const SIGN_UP = 'SIGN_UP';
 const SIGN_IN = 'SIGN_IN';
 
 export const userSignUp = createAsyncThunk(SIGN_UP, async (obj, { dispatch }) => {
-  const response = await fetch(SIGN_UP_API, {
-    method: 'POST',
-    // headers: { 'Content-Type': 'application/json' },
-    body: { user: obj },
+  axios.post(
+    SIGN_UP_API,
+    {
+      user: obj,
+    },
+  ).then((response) => {
+    const data = response;
+    dispatch({
+      type: SIGN_IN,
+      payload: data,
+    });
+    localStorage.setItem('userDetails', JSON.stringify(data.data.data));
+    return data;
+  }).catch((error) => {
+    const err = error;
+    // console.log('error:', err);
+    return err;
   });
-  const data = await response.json();
-  console.log(data);
-  dispatch({
-    type: SIGN_UP,
-    payload: data,
-  });
-  return data;
 });
 
 export const userLogIn = createAsyncThunk(SIGN_IN, async (obj, { dispatch }) => {
@@ -36,23 +42,25 @@ export const userLogIn = createAsyncThunk(SIGN_IN, async (obj, { dispatch }) => 
       type: SIGN_IN,
       payload: data,
     });
-    console.log('Data: ', data);
+    localStorage.setItem('userDetails', JSON.stringify(data.data.data));
+    console.log('Data: ', data.data.data);
     return data;
   }).catch((error) => {
     const err = error;
-    console.log('error:', err);
+    // console.log('error:', err);
     return err;
   });
 });
 
-const usersReducer = (action, state = {}) => {
-  switch (action) {
+// eslint-disable-next-line default-param-last
+const usersReducer = (state = {}, action) => {
+  switch (action.type) {
     case SIGN_UP:
-      console.log(action);
+      // console.log(action);
       return { ...action.payload };
 
     case SIGN_IN:
-      console.log(action);
+      // console.log(action);
       return { ...action.payload };
 
     default:
