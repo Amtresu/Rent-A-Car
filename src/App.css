@@ -1,39 +1,82 @@
-.App {
+body {
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 220px;
+  height: 220px;
+  margin-left: -1rem;
+  margin-bottom: 3rem;
+}
+
+.active {
+  background-color: #97bf0f;
+  color: white;
+}
+
+a {
+  color: black;
+}
+
+#nav-side-bar-footer {
+  margin-top: 400px;
+}
+
+.fa-brands {
+  font-size: 24px;
+}
+
+.fa-text {
+  font-size: 11px;
+}
+
+.homepage {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  max-width: 75%;
+}
+
+.main-slider {
+  max-width: 95%;
+  min-height: 20vh;
+  margin: auto;
+}
+
+.test {
   text-align: center;
+  margin-top: 5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-text {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.select-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 18px;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.registration {
+  position: absolute;
+  top: 1%;
+  left: 20%;
+  max-width: 75%;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.log-in {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  max-width: 75%;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.reservations {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  max-width: 90%;
 }
