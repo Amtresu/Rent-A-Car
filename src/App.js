@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Cars from './components/Cars';
+import Cars from './components/cars/Cars';
 import NavBar from './components/navbar/NavBar';
-import ReserveForm from './components/ReserveForm';
+import ReserveForm from './components/reservations/ReserveForm';
 import Registration from './components/auth/Registration';
 import Login from './components/auth/Login';
 
