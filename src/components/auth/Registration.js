@@ -9,7 +9,7 @@ function Registration() {
     email: '',
     username: '',
     password: '',
-    password2: '',
+    password_confirmation: '',
   });
 
   const dispatch = useDispatch();
@@ -96,7 +96,7 @@ function Registration() {
                           <div className="form-outline flex-fill mb-0">
                             <input
                               type="password"
-                              name="passowrd2"
+                              name="password_confirmation"
                               id="form3Example4cd"
                               onChange={handleChange}
                               className="form-control"
