@@ -10,7 +10,7 @@ body {
 }
 
 .active {
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   color: white;
 }
 
@@ -43,7 +43,7 @@ a {
   margin: auto;
 }
 
-.test{
+.test {
   text-align: center;
   margin-top: 5rem;
 }
@@ -51,7 +51,6 @@ a {
 .home-text {
   text-align: center;
   margin-bottom: 1rem;
-
 }
 
 .select-text {
@@ -81,6 +80,3 @@ a {
   left: 20%;
   max-width: 90%;
 }
-
-
-
