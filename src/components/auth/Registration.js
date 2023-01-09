@@ -21,7 +21,7 @@ function Registration() {
     });
   };
 
-  console.log(state);
+  // console.log(state);
 
   const handleSubmit = (e) => {
     e.preventDefault();

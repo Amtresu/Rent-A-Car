@@ -11,17 +11,9 @@ function ReserveForm() {
           <form className="mx-1 mx-md-4">
 
             <div className="d-flex flex-row align-items-center mb-4">
-              <i className="fas fa-user fa-lg me-3 fa-fw" />
-              <div className="form-outline flex-fill mb-0">
-                <label className="form-label" htmlFor="form3Example1c">Car Name</label>
-                <input type="text" id="form3Example1c" className="form-control" />
-              </div>
-            </div>
-
-            <div className="d-flex flex-row align-items-center mb-4">
               <i className="fas fa-lock fa-lg me-3 fa-fw" />
               <div className="form-outline flex-fill mb-0">
-                <label className="form-label" htmlFor="form3Example4c">Car Reservation Date</label>
+                <label className="form-label" htmlFor="form3Example4c">Car Name</label>
                 <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                   <option selected>Select Vehicle Name</option>
                   <option value="1">Lamborghini</option>
@@ -31,6 +23,14 @@ function ReserveForm() {
                   <option value="5">Audi R8</option>
                 </select>
 
+              </div>
+            </div>
+
+            <div className="d-flex flex-row align-items-center mb-4">
+              <i className="fas fa-user fa-lg me-3 fa-fw" />
+              <div className="form-outline flex-fill mb-0">
+                <label className="form-label" htmlFor="form3Example1c">Car Reservation Date</label>
+                <input type="datetime-local" id="form3Example1c" className="form-control" />
               </div>
             </div>
 
