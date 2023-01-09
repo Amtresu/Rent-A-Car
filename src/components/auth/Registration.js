@@ -7,7 +7,9 @@ import { userSignUp } from '../../redux/users/users';
 function Registration() {
   const [state, setState] = useState({
     email: '',
+    username: '',
     password: '',
+    password2: '',
   });
 
   const dispatch = useDispatch();
@@ -92,7 +94,7 @@ function Registration() {
                           <div className="form-outline flex-fill mb-0">
                             <input
                               type="password"
-                              name="passowrd_confirmation"
+                              name="passowrd2"
                               id="form3Example4cd"
                               onChange={handleChange}
                               className="form-control"
