@@ -81,6 +81,26 @@ a {
   max-width: 90%;
 }
 
+.details {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  max-width: 90%;
+}
+
 .add-car {
   width: 900px;
+}
+
+.details-right {
+  margin-left: 45rem;
+}
+
+.detailed-card {
+  width: 25rem;
+}
+
+.btn-reserve {
+  background-color: #97bf0f;
+  margin-top: 3rem;
 }

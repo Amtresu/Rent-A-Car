@@ -9,7 +9,7 @@ import Login from './components/auth/Login';
 import MyReservations from './components/reservations/MyReservations';
 import AddCarFrom from './components/reservations/AddCarFrom';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
-
+import CarDetails from './components/cars/CarDetails';
 import './App.css';
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         <Route path="/add_car" element={<AddCarFrom />} />
         <Route path="/delete_car" element={<DeleteCarForm />} />
         <Route path="/registrations" element={<Registration />} />
+        <Route path="/cars/:id" element={<CarDetails />} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>
