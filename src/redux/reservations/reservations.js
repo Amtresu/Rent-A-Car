@@ -12,10 +12,10 @@ const initialState = {
 };
 
 // Action Creation
-// export const reserveCar = (payload) => ({
-//   type: RESERVE_CAR,
-//   payload,
-// });
+export const reserveCar = (payload) => ({
+  type: RESERVE_CAR,
+  payload,
+});
 
 // Fetch Cars
 // export const reserveCarAsync = (obj) => async (dispatch) => {
