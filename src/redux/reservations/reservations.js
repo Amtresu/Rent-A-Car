@@ -1,8 +1,8 @@
 /* eslint-disable default-param-last */
 import axios from 'axios';
 
-// const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
-const reserveCarAPI = 'http://localhost:3000/reservations';
+const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
+// const reserveCarAPI = 'http://localhost:3000/reservations';
 
 // Actions
 const RESERVE_CAR = 'RESERVE_CAR';
@@ -19,16 +19,14 @@ export const reserveCar = (payload) => ({
 
 // Fetch Cars
 export const reserveCarAsync = (obj) => async (dispatch) => {
-    // console.log("Obj ", obj)
-    const obj_two = {
-        reserve_date: obj.reserve_date.slice(0, 10),
-        car_id: +obj.car_id,
-        user_id: obj.user_id
-      }
-    // console.log("object two ", obj_two)
-  const response = await axios.post(reserveCarAPI, obj_two);
+  const objtwo = {
+    reserve_date: obj.reserve_date.slice(0, 10),
+    car_id: +obj.car_id,
+    user_id: obj.user_id,
+  };
+  const response = await axios.post(reserveCarAPI, objtwo);
   const data = await response.data;
-  console.log("Data: ", data);
+  console.log('Data: ', data);
   dispatch(reserveCar(data));
 };
 
