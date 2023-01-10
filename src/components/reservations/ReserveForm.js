@@ -6,7 +6,7 @@ import { fetchCarsAsync } from '../../redux/cars/cars';
 import { reserveCarAsync } from '../../redux/reservations/reservations';
 
 function ReserveForm() {
-  const [state, setState] = useState({ car_id: 0, reserve_date: '', user_id: 0 });
+  const [state, setState] = useState({ car_id: 0, reserve_date: '', user_id: 1 });
 
   const { cars } = useSelector((state) => state.cars);
   const dispatch = useDispatch();
@@ -34,6 +34,7 @@ function ReserveForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(reserveCarAsync(state));
+    console.log(state);
   };
 
   return (

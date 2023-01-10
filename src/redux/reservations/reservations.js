@@ -26,7 +26,6 @@ export const reserveCarAsync = (obj) => async (dispatch) => {
   };
   const response = await axios.post(reserveCarAPI, objtwo);
   const data = await response.data;
-  console.log('Data: ', data);
   dispatch(reserveCar(data));
 };
 

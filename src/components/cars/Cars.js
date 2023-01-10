@@ -8,16 +8,6 @@ function Cars() {
   return (
     <div className="container-fluid homepage">
       <ImageSlider />
-      {/* <div className="test">
-        {renderCars.map((car) => (
-          <Car
-            key={car.id}
-            id={car.id}
-            author={car.author}
-          />
-        ))}
-      </div> */}
-
     </div>
   );
 }

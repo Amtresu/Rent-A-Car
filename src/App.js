@@ -7,7 +7,7 @@ import ReserveForm from './components/reservations/ReserveForm';
 import Registration from './components/auth/Registration';
 import Login from './components/auth/Login';
 import MyReservations from './components/reservations/MyReservations';
-import AddCarFrom from './components/reservations/AddCarFrom';
+import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
 import './App.css';
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Cars />} />
         <Route path="/reserve" element={<ReserveForm />} />
         <Route path="/reservations" element={<MyReservations />} />
-        <Route path="/add_car" element={<AddCarFrom />} />
+        <Route path="/add_car" element={<AddCarForm />} />
         <Route path="/delete_car" element={<DeleteCarForm />} />
         <Route path="/registrations" element={<Registration />} />
         <Route path="/cars/:id" element={<CarDetails />} />
