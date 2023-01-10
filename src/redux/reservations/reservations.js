@@ -18,18 +18,18 @@ export const reserveCar = (payload) => ({
 });
 
 // Fetch Cars
-// export const reserveCarAsync = (obj) => async (dispatch) => {
-//     console.log("Obj ", obj)
-//     const obj_two = {
-//         reserve_date: obj.reserve_date.slice(0, 10),
-//         car_id: +obj.car_id,
-//         user_id: obj.user_id
-//       }
-//     console.log("object two ", obj_two)
-//   const response = await axios.post(reserveCarAPI, obj_two);
-//   const data = await response.data;
-//   dispatch(fetchCars(data));
-// };
+export const reserveCarAsync = (obj) => async (dispatch) => {
+    console.log("Obj ", obj)
+    const obj_two = {
+        reserve_date: obj.reserve_date.slice(0, 10),
+        car_id: +obj.car_id,
+        user_id: obj.user_id
+      }
+    console.log("object two ", obj_two)
+  const response = await axios.post(reserveCarAPI, obj_two);
+  const data = await response.data;
+  dispatch(fetchCars(data));
+};
 
 axios({
     method: 'post',
