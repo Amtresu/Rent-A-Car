@@ -1,26 +1,51 @@
 /* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { fetchCarsAsync } from '../../redux/cars/cars';
+import { reserveCarAsync } from '../../redux/reservations/reservations';
 
 function ReserveForm() {
+  const [state, setState] = useState({car_id: 0, reserve_date: '', user_id: 1});
+
+  const { cars } = useSelector((state) => state.cars);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCarsAsync());
+  }, []);
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(reserveCarAsync(state));
+  };
+
   return (
     <div className="reservations">
       <div className="card add-car">
         <h5 className="card-header text-center fw-semibold fs-3">ADD CAR RESERVATION</h5>
         <div className="card-body">
-          <form className="mx-1 mx-md-4">
+          <form onSubmit={handleSubmit} className="mx-1 mx-md-4">
 
             <div className="d-flex flex-row align-items-center mb-4">
               <i className="fas fa-lock fa-lg me-3 fa-fw" />
               <div className="form-outline flex-fill mb-0">
                 <label className="form-label" htmlFor="form3Example4c">Car Name</label>
-                <select className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <select name='car_id' onChange={handleChange} className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                   <option selected>Select Vehicle Name</option>
-                  <option value="1">Lamborghini</option>
-                  <option value="2">Mercedes</option>
-                  <option value="3">Chevrolet</option>
-                  <option value="4">Nissan GTR</option>
-                  <option value="5">Audi R8</option>
+                  {cars.map((car) => {
+                    const { id, model } = car;
+                    return <option value={id} key={id}>{model}</option>;
+                  })}
+
                 </select>
 
               </div>
@@ -30,12 +55,12 @@ function ReserveForm() {
               <i className="fas fa-user fa-lg me-3 fa-fw" />
               <div className="form-outline flex-fill mb-0">
                 <label className="form-label" htmlFor="form3Example1c">Car Reservation Date</label>
-                <input type="datetime-local" id="form3Example1c" className="form-control" />
+                <input name='reserve_date' onChange={handleChange} type="datetime-local" id="form3Example1c" className="form-control" />
               </div>
             </div>
 
             <div className="divider d-flex align-items-center ms-3 mb-2">
-              <button type="button" className="btn btn-success">Reserve Vehicle</button>
+              <button type="submit" className="btn btn-success">Reserve Vehicle</button>
             </div>
 
             <div className="divider d-flex align-items-center my-4 ms-3">
@@ -53,3 +78,4 @@ function ReserveForm() {
 }
 
 export default ReserveForm;
+
