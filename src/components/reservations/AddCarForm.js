@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function AddCarFrom() {
+function AddCarForm() {
   return (
     <div className="reservations">
       <div className="card add-car">
@@ -68,4 +68,4 @@ function AddCarFrom() {
   );
 }
 
-export default AddCarFrom;
+export default AddCarForm;
