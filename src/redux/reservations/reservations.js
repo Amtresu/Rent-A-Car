@@ -1,8 +1,8 @@
 /* eslint-disable default-param-last */
 import axios from 'axios';
 
-// const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
-const reserveCarAPI = 'http://localhost:3000/reservations';
+const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
+// const reserveCarAPI = 'http://localhost:3000/reservations';
 
 // Actions
 const RESERVE_CAR = 'RESERVE_CAR';
