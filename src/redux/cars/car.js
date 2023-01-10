@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-const API = 'https://type.fit/api/quotes';
+const API = 'https://final-capstone-api.onrender.com/cars';
 const initialState = [];
 const ADD_CAR = 'ADD_CAR'
 
@@ -15,7 +15,12 @@ const getCars = createAsyncThunk(ADD_CAR, async () => {
     item = api.map((car) => ({
      key: car.id,
      id: car.id,
-      author: car.author,
+     image: car.image,
+     name: car.name,
+     description: car.description,
+     model: car.model,
+     manufacturing_date: car.manufacturing_date,
+     reserved: car.reserved,
     }));
   } catch (error) {
     console.error('ERR', error);

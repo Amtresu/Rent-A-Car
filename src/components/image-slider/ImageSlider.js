@@ -4,15 +4,22 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/style-prop-object */
-import React from 'react';
+/* eslint-disable */
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   FaTwitter, FaPinterest, FaFacebook,
 } from 'react-icons/fa';
+import car, { getCars } from '../../redux/cars/car';
 
 function ImageSlider() {
+  const cars = useSelector((state) => state.car);
+
+  const dispatch = useDispatch();
+
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -48,6 +55,10 @@ function ImageSlider() {
     prevArrow: <SamplePrevArrow />,
   };
 
+  useEffect(() => {
+    dispatch(getCars());
+  }, []);
+
   return (
 
     <div className="main-slider">
@@ -55,177 +66,29 @@ function ImageSlider() {
       <h4 className="text-muted fw-bold select-text ">Please Select Your Preferred Car Model</h4>
 
       <Slider {...settings}>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
+        {
+          cars.map((car) => (
+            <div className="card border-light" style="width: 15rem;" id={car.key}>
+              <img src={car.image} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title text-center">{car.name}</h5>
+                <p className="text-muted fw-bold text-center">................................</p>
+                <p className="card-text">{car.description}</p>
+                <div className="d-flex justify-content-between me-5 ms-5">
+                  <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                    <FaTwitter className="fa-brands" />
+                  </a>
+                  <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                    <FaFacebook className="fa-brands" />
+                  </a>
+                  <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                    <FaPinterest className="fa-brands" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card border-light" style="width: 15rem;">
-          <img src="https://shorturl.at/bHO23" className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title text-center">Car Name</h5>
-            <p className="text-muted fw-bold text-center">................................</p>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-            <div className="d-flex justify-content-between me-5 ms-5">
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaTwitter className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaFacebook className="fa-brands" />
-              </a>
-              <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-                <FaPinterest className="fa-brands" />
-              </a>
-            </div>
-          </div>
-        </div>
+          ))
+          }
       </Slider>
     </div>
   );
