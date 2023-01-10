@@ -15,6 +15,7 @@ function ReserveForm() {
     dispatch(fetchCarsAsync());
   }, []);
 
+  // Add state update handler
   const handleChange = (e) => {
     setState({
       ...state,
@@ -23,6 +24,7 @@ function ReserveForm() {
   };
 
 
+  // Add form submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(reserveCarAsync(state));
