@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Cars from './components/cars/Cars';
 import NavBar from './components/navbar/NavBar';
 import ReserveForm from './components/reservations/ReserveForm';
@@ -13,16 +13,19 @@ import CarDetails from './components/cars/CarDetails';
 import './App.css';
 
 function App() {
-  // const user = useSelector((state) => state);
-  // console.log(user);
+  const user = useSelector((state) => state.user);
+  console.log(user);
 
-  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   localStorage.setItem('userDetails', JSON.stringify(user));
+  // });
+
   return (
     <div className="App">
       <NavBar />
       <Routes>
         <Route path="/" element={<Cars />} />
-        <Route path="/reserve" element={<ReserveForm />} />
+        <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Login />} />
         <Route path="/reservations" element={<MyReservations />} />
         <Route path="/add_car" element={<AddCarForm />} />
         <Route path="/delete_car" element={<DeleteCarForm />} />
