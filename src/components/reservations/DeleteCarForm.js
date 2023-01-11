@@ -1,37 +1,44 @@
-import React from 'react';
+/* eslint-disable no-console */
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { FaTrash } from 'react-icons/fa';
+import { fetchCarsAsync } from '../../redux/cars/cars';
 
 function DeleteCarForm() {
+  const { cars } = useSelector((state) => state.cars);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCarsAsync());
+  }, []);
+
+  console.log(cars);
+
   return (
     <div className="reservations">
       <h2 className="fw-bold home-text ms-5"> DELETE A CAR</h2>
-      <table className="table">
+      <table className="table table-striped-columns">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Car Name</th>
+            <th scope="col">Car Model</th>
+            <th scope="col">Car Reservation Day</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colSpan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
+        {cars.map((car) => (
+          <tbody key={car.id}>
+            <tr>
+              <th scope="row">{car.id}</th>
+              <td>{car.name}</td>
+              <td>{car.model}</td>
+              <td>{car.manufacturing_date}</td>
+              <td><FaTrash /></td>
+            </tr>
+          </tbody>
+        ))}
       </table>
     </div>
   );
