@@ -85,14 +85,14 @@ function ImageSlider() {
                 <br />
                 {car.description}
               </p>
-              <div className="d-flex justify-content-between me-5 ms-5">
-                <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+              <div className="d-flex justify-content-evenly me-3 ms-3">
+                <a className="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button">
                   <FaTwitter className="fa-brands" />
                 </a>
-                <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                <a className="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button">
                   <FaFacebook className="fa-brands" />
                 </a>
-                <a className="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+                <a className="btn btn-outline-secondary btn-floating m-1 rounded-circle" href="#!" role="button">
                   <FaPinterest className="fa-brands" />
                 </a>
               </div>
