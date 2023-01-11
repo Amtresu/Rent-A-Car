@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Cars from './components/cars/Cars';
 import NavBar from './components/navbar/NavBar';
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<Cars />} />
+        <Route path="/" element={user.authenticated ? <Cars /> : <Navigate to="/login" />} />
         <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Login />} />
         <Route path="/reservations" element={<MyReservations />} />
         <Route path="/add_car" element={<AddCarForm />} />
