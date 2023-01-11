@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 // import axios from 'axios';
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { userLogIn } from '../../redux/users/users';
 
 function Login() {
-  const user = useSelector((state) => state.user);
+  // const user = useSelector((state) => state.user);
 
-  console.log(user);
+  // console.log(user);
   const [state, setState] = useState({
     email: '',
     password: '',
