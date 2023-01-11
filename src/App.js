@@ -14,7 +14,7 @@ import './App.css';
 
 function App() {
   const user = useSelector((state) => state.user);
-  console.log(user);
+  // console.log(user);
 
   // useEffect(() => {
   //   localStorage.setItem('userDetails', JSON.stringify(user));
@@ -25,7 +25,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={user.authenticated ? <Cars /> : <Navigate to="/login" />} />
-        <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Login />} />
+        <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Navigate to="/login" />} />
         <Route path="/reservations" element={<MyReservations />} />
         <Route path="/add_car" element={<AddCarForm />} />
         <Route path="/delete_car" element={<DeleteCarForm />} />
