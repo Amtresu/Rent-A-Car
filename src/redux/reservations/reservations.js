@@ -27,6 +27,7 @@ export const reserveCarAsync = (obj) => async (dispatch) => {
   const response = await axios.post(reserveCarAPI, objtwo);
   const data = await response.data;
   dispatch(reserveCar(data));
+  alert('data');
 };
 
 // Reducer
