@@ -66,10 +66,14 @@
   }
 
   .reservations {
-    margin-left: 3rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 90%;
   }
 
   .my-reservations {
     margin-top: 5rem;
+    margin-left: 2rem;
+    width: 90%;
   }
 }
