@@ -14,7 +14,6 @@ import MobileNavBar from './components/navbar/MobileNavBar';
 import './App.css';
 import './media-queries-breakpoints/Small.css';
 import './media-queries-breakpoints/Large.css';
-import './media-queries-breakpoints/Medium.css';
 import './media-queries-breakpoints/XLarge.css';
 
 function App() {

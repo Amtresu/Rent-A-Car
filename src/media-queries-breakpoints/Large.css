@@ -1,13 +1,31 @@
-/* @media (max-width: 991.98px) {
+@media (max-width: 991.98px) {
+  .logo {
+    margin-top: -4rem;
+  }
+
+  .mobile-items {
+    margin-top: -3rem;
+  }
+
+  .nav-side-bar {
+    display: none;
+  }
+
+  .mobile-nav-bar {
+    display: block;
+  }
+
+  .mobile-footer {
+    margin-top: 10rem;
+  }
+
   .fa-brands {
     font-size: 24px;
   }
 
   .homepage {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    max-width: 75%;
+    margin-top: -2rem;
+    margin-left: -2rem;
   }
 
   .main-slider {
@@ -34,43 +52,12 @@
   }
 
   .registration {
-    position: absolute;
-    top: 1%;
-    left: 20%;
-    max-width: 75%;
+    margin-left: -2rem;
+    width: 100%;
   }
 
   .log-in {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    max-width: 75%;
-  }
-
-  .reservations {
-    position: absolute;
-    top: 10%;
-    left: 30%;
-    max-width: 90%;
-  }
-
-  .details {
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    max-width: 90%;
-  }
-
-  .add-car {
-    width: 900px;
-  }
-
-  .details-right {
-    margin-left: 45rem;
-  }
-
-  .detailed-card {
-    width: 25rem;
+    margin-left: -2rem;
   }
 
   .btn-reserve {
@@ -78,7 +65,15 @@
     margin-top: 3rem;
   }
 
-  .table {
-    width: 60rem;
+  .reservations {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 90%;
   }
-} */
+
+  .my-reservations {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width: 90%;
+  }
+}
