@@ -23,6 +23,12 @@ function AddCarForm() {
       [e.target.name]: e.target.value,
     });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addCars(state));
+    event.target.reset()
+  };
   
 
   return (
