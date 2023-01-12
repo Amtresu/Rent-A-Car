@@ -1,0 +1,74 @@
+@media (max-width: 575.98px) {
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin-left: -1rem;
+    margin-bottom: 3rem;
+  }
+
+  .nav-side-bar {
+    display: none;
+  }
+
+  .mobile-nav-bar {
+    display: block;
+  }
+
+  .fa-brands {
+    font-size: 24px;
+  }
+
+  .homepage {
+    margin-top: -2rem;
+   margin-left: -2rem;
+  }
+
+  .main-slider {
+    max-width: 95%;
+    min-height: 20vh;
+    margin: auto;
+  }
+
+  .test {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .home-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .select-text {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 18px;
+  }
+
+  .registration {
+    margin-left: -2rem;
+    width: 100%;
+  }
+
+  .log-in {
+    margin-left: -2rem;
+  }
+
+  /* .details-right {
+    margin-left: 45rem;
+  }
+
+  .detailed-card {
+    width: 10rem;
+  } */
+
+  .btn-reserve {
+    background-color: #97bf0f;
+    margin-top: 3rem;
+  }
+
+  .table {
+    width: 60rem;
+  }
+}

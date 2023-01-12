@@ -1,0 +1,108 @@
+@media (max-width: 991.98px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    width: 220px;
+    height: 220px;
+    margin-left: -1rem;
+    margin-bottom: 3rem;
+  }
+
+  .active {
+    background-color: #97bf0f;
+    color: white;
+  }
+
+  a {
+    color: black;
+  }
+
+  #nav-side-bar-footer {
+    margin-top: 400px;
+  }
+
+  .fa-brands {
+    font-size: 24px;
+  }
+
+  .homepage {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    max-width: 75%;
+  }
+
+  .main-slider {
+    max-width: 95%;
+    min-height: 20vh;
+    margin: auto;
+  }
+
+  .test {
+    text-align: center;
+    margin-top: 5rem;
+  }
+
+  .home-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .select-text {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 18px;
+  }
+
+  .registration {
+    position: absolute;
+    top: 1%;
+    left: 20%;
+    max-width: 75%;
+  }
+
+  .log-in {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    max-width: 75%;
+  }
+
+  .reservations {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    max-width: 90%;
+  }
+
+  .details {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    max-width: 90%;
+  }
+
+  .add-car {
+    width: 900px;
+  }
+
+  .details-right {
+    margin-left: 45rem;
+  }
+
+  .detailed-card {
+    width: 25rem;
+  }
+
+  .btn-reserve {
+    background-color: #97bf0f;
+    margin-top: 3rem;
+  }
+
+  .table {
+    width: 60rem;
+  }
+}

@@ -10,8 +10,12 @@ import MyReservations from './components/reservations/MyReservations';
 import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
+import MobileNavBar from './components/navbar/MobileNavBar';
 import './App.css';
 import './Stylesheet.css';
+import './media-queries-breakpoints/Small.css';
+import './media-queries-breakpoints/Large.css';
+import './media-queries-breakpoints/Medium.css';
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -24,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <MobileNavBar />
       <Routes>
         <Route path="/" element={user.authenticated ? <Cars /> : <Navigate to="/login" />} />
         <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Navigate to="/login" />} />
