@@ -21,9 +21,12 @@ export const userSignUp = createAsyncThunk(SIGN_UP, async (obj, { dispatch }) =>
     const data = response;
     dispatch({
       type: SIGN_IN,
-      payload: data,
+      payload: {
+        ...data.data.data,
+        authenticated: true,
+      },
     });
-    localStorage.setItem('userDetails', JSON.stringify(data.data.data));
+    localStorage.setItem('userDetails', JSON.stringify({ ...data.data.data, authenticated: true }));
     return data;
   }).catch((error) => {
     const err = error;
@@ -42,9 +45,12 @@ export const userLogIn = createAsyncThunk(SIGN_IN, async (obj, { dispatch }) => 
     const data = response;
     dispatch({
       type: SIGN_IN,
-      payload: data,
+      payload: {
+        ...data.data.data,
+        authenticated: true,
+      },
     });
-    localStorage.setItem('userDetails', JSON.stringify(data.data.data));
+    localStorage.setItem('userDetails', JSON.stringify({ ...data.data.data, authenticated: true }));
     // console.log('Data: ', data.data.data);
     return data;
   }).catch((error) => {
@@ -54,8 +60,12 @@ export const userLogIn = createAsyncThunk(SIGN_IN, async (obj, { dispatch }) => 
   });
 });
 
+const initialState = {
+  authenticated: false,
+};
+
 // eslint-disable-next-line default-param-last
-const usersReducer = (state = {}, action) => {
+const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case SIGN_UP:
       // console.log(action);
