@@ -16,6 +16,13 @@ function AddCarForm() {
     image: '',
     manufacturing_date: '',
   })
+
+  const handleChange = (e) => {
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
   
 
   return (
