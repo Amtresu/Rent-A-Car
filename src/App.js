@@ -12,7 +12,6 @@ import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
 import MobileNavBar from './components/navbar/MobileNavBar';
 import './App.css';
-import './Stylesheet.css';
 import './media-queries-breakpoints/Small.css';
 import './media-queries-breakpoints/Large.css';
 import './media-queries-breakpoints/Medium.css';

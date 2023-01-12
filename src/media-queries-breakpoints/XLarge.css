@@ -47,7 +47,8 @@
     max-width: 75%;
   }
 
-  .reservations {
+  .reservations,
+  .my-reservations {
     position: absolute;
     top: 10%;
     left: 30%;
