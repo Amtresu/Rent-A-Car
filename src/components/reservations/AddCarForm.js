@@ -1,9 +1,9 @@
 /* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
 /* eslint-disable */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { addCars, fetchCarsAsync } from '../../redux/cars/cars';
+import { useDispatch } from 'react-redux';
+import { addCars } from '../../redux/cars/cars';
 
 function AddCarForm() {
   const dispatch = useDispatch();
