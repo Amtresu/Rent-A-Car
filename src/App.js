@@ -31,7 +31,7 @@ function App() {
         <Route path="/delete_car" element={<DeleteCarForm />} />
         <Route path="/registrations" element={<Registration />} />
         <Route path="/cars/:id" element={<CarDetails />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
       </Routes>
     </div>
   );
