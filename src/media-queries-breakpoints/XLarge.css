@@ -1,4 +1,4 @@
-@media (min-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 1200px){
   .fa-brands {
     font-size: 24px;
   }
@@ -79,6 +79,6 @@
   }
 
   .table {
-    width: 40rem;
+    width: 45rem;
   }
 }
