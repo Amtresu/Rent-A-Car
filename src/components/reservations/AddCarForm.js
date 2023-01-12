@@ -27,7 +27,7 @@ function AddCarForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addCars(state));
-    event.target.reset()
+    e.target.reset()
   };
   
 
