@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { userLogIn } from '../../redux/users/users';
 
 function Login() {
+  // const user = useSelector((state) => state.user);
+
+  // console.log(user);
   const [state, setState] = useState({
     email: '',
     password: '',
@@ -20,45 +23,16 @@ function Login() {
     });
   };
 
-  // const LOGIN_API = 'http://127.0.0.1:3000/login';
-  // const LOGIN_API = 'https://final-capstone-api.onrender.com/login';
-
-  // const handleUserLogIn = async (obj) => {
-  //   const response = await fetch('http://127.0.0.1:3000/login', {
-  //     method: 'POST',
-  //     header: {
-  //       'Access-Control-Allow-Origin': '*',
-  //     },
-  //     body: JSON.stringify({ user: obj }),
-  //   });
-  //   console.log('William in Login: ', response);
-  //   const data = await response.json();
-  //   console.log('William in login: ', data);
-  //   return data;
-  // };
-
-  // const handleUserLogIn = async (obj) => {
-  //   axios.post(
-  //     'http://127.0.0.1:3000/login',
-  //     {
-  //       user: obj,
-  //     },
-  //   ).then((response) => {
-  //     console.log(response);
-  //     const data = response.json();
-  //     console.log(data);
-  //     return data;
-  //   }).catch((error) => {
-  //     const err = error;
-  //     return err;
-  //   });
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // handleUserLogIn(state);
     dispatch(userLogIn(state));
   };
+
+  // const data = JSON.parse(localStorage.getItem('userDetails')) || {
+  //   authenticated: false,
+  // };
+  // console.log(data.authenticated);
 
   return (
     <section className="vh-100 log-in">
