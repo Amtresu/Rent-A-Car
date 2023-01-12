@@ -11,6 +11,7 @@ import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
 import './App.css';
+import './Stylesheet.css';
 
 function App() {
   // const user = useSelector((state) => state);
@@ -24,11 +25,11 @@ function App() {
         <Route path="/" element={<Cars />} />
         <Route path="/reserve" element={<ReserveForm />} />
         <Route path="/reservations" element={<MyReservations />} />
+        <Route path="/registrations" element={<Registration />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/add_car" element={<AddCarForm />} />
         <Route path="/delete_car" element={<DeleteCarForm />} />
-        <Route path="/registrations" element={<Registration />} />
         <Route path="/cars/:id" element={<CarDetails />} />
-        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
