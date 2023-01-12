@@ -19,6 +19,9 @@ function DeleteCarForm() {
   const handleSubmit = (car) => {
     dispatch(deleteCars(car.id));
     dispatch(fetchCarsAsync());
+    setTimeout(() => {
+      window.location.reload();
+    }, 5000);
   };
   return (
     <div className="reservations">
