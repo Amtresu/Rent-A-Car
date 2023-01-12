@@ -1,7 +1,6 @@
 @media (max-width: 575.98px) {
   .logo {
     margin-top: -4rem;
-   
   }
 
   .mobile-items {
@@ -26,7 +25,7 @@
 
   .homepage {
     margin-top: -2rem;
-   margin-left: -2rem;
+    margin-left: -2rem;
   }
 
   .main-slider {
@@ -61,20 +60,16 @@
     margin-left: -2rem;
   }
 
-  /* .details-right {
-    margin-left: 45rem;
-  }
-
-  .detailed-card {
-    width: 10rem;
-  } */
-
   .btn-reserve {
     background-color: #97bf0f;
     margin-top: 3rem;
   }
 
-  .table {
-    width: 60rem;
+  .reservations {
+    margin-left: 3rem;
+  }
+
+  .my-reservations {
+    margin-top: 5rem;
   }
 }

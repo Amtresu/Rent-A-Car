@@ -16,6 +16,7 @@ import './Stylesheet.css';
 import './media-queries-breakpoints/Small.css';
 import './media-queries-breakpoints/Large.css';
 import './media-queries-breakpoints/Medium.css';
+import './media-queries-breakpoints/XLarge.css';
 
 function App() {
   const user = useSelector((state) => state.user);

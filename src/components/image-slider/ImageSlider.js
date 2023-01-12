@@ -70,7 +70,7 @@ function ImageSlider() {
 
       <Slider {...settings}>
         {cars.map((car) => (
-          <div key={car.id} className="card border-light" style="width: 15rem;">
+          <div key={car.id} className="card border-light">
             <img src={car.image} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title text-center">

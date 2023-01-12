@@ -1,99 +1,76 @@
 @media (max-width: 767.98px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav-side-bar {
-    display: none;
-  }
-
-  .logo {
-    width: 220px;
-    height: 220px;
-    margin-left: -1rem;
-    margin-bottom: 3rem;
-  }
-
-  .active {
-    background-color: #97bf0f;
-    color: white;
-  }
-
-  a {
-    color: black;
-  }
-
-  #nav-side-bar-footer {
-    margin-top: 400px;
-  }
-
-  .fa-brands {
-    font-size: 24px;
-  }
-
-  .homepage {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    max-width: 75%;
-  }
-
-  .main-slider {
-    max-width: 95%;
-    min-height: 20vh;
-    margin: auto;
-  }
-
-  .test {
-    text-align: center;
-    margin-top: 5rem;
-  }
-
-  .home-text {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .select-text {
-    text-align: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    font-size: 18px;
-  }
-
-  .registration {
-    position: absolute;
-    top: 1%;
-    left: 20%;
-    max-width: 75%;
-  }
-
-  .log-in {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    max-width: 75%;
-  }
-
-  .add-car {
-    margin-left: -12rem;
-    width: 500px;
-  }
-
-  .details-right {
-    margin-left: 45rem;
-  }
-
-  .detailed-card {
-    width: 25rem;
-  }
-
-  .btn-reserve {
-    background-color: #97bf0f;
-    margin-top: 3rem;
-  }
-
-  .table {
-    width: 60rem;
-  }
+    .logo {
+        margin-top: -4rem;
+      }
+    
+      .mobile-items {
+        margin-top: -3rem;
+      }
+    
+      .nav-side-bar {
+        display: none;
+      }
+    
+      .mobile-nav-bar {
+        display: block;
+      }
+    
+      .mobile-footer {
+        margin-top: 10rem;
+      }
+    
+      .fa-brands {
+        font-size: 24px;
+      }
+    
+      .homepage {
+        margin-top: -2rem;
+        margin-left: -2rem;
+      }
+    
+      .main-slider {
+        max-width: 95%;
+        min-height: 20vh;
+        margin: auto;
+      }
+    
+      .test {
+        text-align: center;
+        margin-top: 5rem;
+      }
+    
+      .home-text {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    
+      .select-text {
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-size: 18px;
+      }
+    
+      .registration {
+        margin-left: -2rem;
+        width: 100%;
+      }
+    
+      .log-in {
+        margin-left: -2rem;
+      }
+    
+      .btn-reserve {
+        background-color: #97bf0f;
+        margin-top: 3rem;
+      }
+    
+      .reservations {
+        margin-left: -10rem;
+        max-width: 80%;
+      }
+    
+      .my-reservations {
+        margin-top: 5rem;
+      }
 }
