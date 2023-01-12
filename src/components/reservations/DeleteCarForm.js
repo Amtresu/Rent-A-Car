@@ -10,6 +10,11 @@ function DeleteCarForm() {
   useEffect(() => {
     dispatch(fetchCarsAsync());
   }, []);
+
+  const handleSubmit = (car) => {
+    dispatch(deleteCars(car.id));
+    dispatch(fetchCarsAsync());
+  };
   return (
     <div className="reservations">
       <h2 className="fw-bold home-text ms-5"> DELETE A CAR</h2>
@@ -19,8 +24,8 @@ function DeleteCarForm() {
            <div key={car.id}>
              <p>{car.name}</p>
              <button
-               type="submit"
-               onClick={() => dispatch(deleteCars(car.id))}
+               type="button"
+               onClick={() => { handleSubmit(car); }}
              >
                Delete
 
