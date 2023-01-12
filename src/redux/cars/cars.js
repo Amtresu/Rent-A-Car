@@ -33,6 +33,25 @@ export const deleteCars = (id) => async (dispatch) => {
   if (response.ok) dispatch({ type: DELETE_CAR, payload: id });
 };
 
+export const addCars = createAsyncThunk(POST_CAR, async (obj, { dispatch }) => {
+  axios.post(
+    carsApi,
+    {
+      car: obj,
+    },
+  ).then((response) => {
+    const data = JSON.stringify(response);
+    dispatch({
+      type: POST_CAR,
+      payload: data,
+    });
+    return data;
+  }).catch((error) => {
+    const err = error;
+    return err;
+  });
+});
+
 // Reducer
 const carsReducer = (state = initialState, action) => {
   switch (action.type) {
