@@ -27,7 +27,7 @@ function DeleteCarForm() {
     <div className="my-reservations">
       <h2 className="fw-bold home-text ms-5"> DELETE A CAR</h2>
       <div className="table-responsive ">
-        <table className="table table-striped-columns">
+        <table className="table table-striped-columns table-bordered">
           <thead>
             <tr>
               <th scope="col">#</th>
