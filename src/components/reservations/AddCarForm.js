@@ -100,7 +100,7 @@ function AddCarForm() {
               </div>
 
             <div className="divider d-flex align-items-center my-4 ms-3">
-              <Link to="/" class="btn btn-danger">
+              <Link to="/" className="btn btn-danger">
                 Cancel
               </Link>
             </div>
