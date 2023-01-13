@@ -133,8 +133,7 @@ npm test
 👤 **Conor Joseph Follette**
 
 - GitHub: [@githubhandle](https://github.com/https://github.com/Amtresu)
-- Twitter: [@twitterhandle](https://twitter.com/)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/conor-follette/)
 
 👤 **David Kasilia Mwanzia**
 
