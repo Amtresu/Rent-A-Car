@@ -12,7 +12,7 @@ const useAuth = () => {
   return false;
 };
 
-function ProtectedRoutes() {
+function ProtectedAdminRoutes() {
   const user = useSelector((state) => state.user);
   const isAuth = useAuth();
   if (user?.authenticated === true) {
@@ -21,4 +21,4 @@ function ProtectedRoutes() {
   return <Login />;
 }
 
-export default ProtectedRoutes;
+export default ProtectedAdminRoutes;

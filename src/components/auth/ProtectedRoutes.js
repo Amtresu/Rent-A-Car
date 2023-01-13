@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router';
-import Cars from '../cars/Cars';
 import Login from './Login';
 
 const useAuth = () => {
