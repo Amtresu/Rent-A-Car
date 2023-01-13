@@ -51,7 +51,7 @@
   .my-reservations {
     position: absolute;
     top: 10%;
-    left: 25%;
+    left: 27%;
   }
 
   .details {
@@ -80,5 +80,9 @@
 
   .table {
     width: 50rem;
+  }
+
+  .mobile-image-slider {
+    display: none;
   }
 }

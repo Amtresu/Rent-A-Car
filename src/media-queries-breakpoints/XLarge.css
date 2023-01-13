@@ -13,7 +13,7 @@
   .main-slider {
     max-width: 95%;
     min-height: 20vh;
-    margin: auto;
+    margin-left: 6rem;
   }
 
   .test {
@@ -51,14 +51,14 @@
   .my-reservations {
     position: absolute;
     top: 10%;
-    left: 30%;
+    left: 32%;
   }
 
   .details {
     position: absolute;
     top: 10%;
-    left: 20%;
-    max-width: 90%;
+    left: 30%;
+    max-width: 60%;
   }
 
   .add-car {
@@ -66,7 +66,8 @@
   }
 
   .details-right {
-    margin-left: 45rem;
+    margin-top: 25rem;
+    margin-left: 10rem;
   }
 
   .detailed-card {
@@ -80,5 +81,25 @@
 
   .table {
     width: 45rem;
+  }
+
+  .mobile-image-slider {
+    display: none;
+  }
+
+  .card-img-top {
+    max-width: 25rem;
+    height: 10rem;
+  }
+
+  .car-desc {
+    max-width: 25rem;
+    height: 10rem;
+    overflow-y: scroll;
+  }
+
+  .car-img-details {
+    max-width: 40rem;
+    height: 25rem;
   }
 }

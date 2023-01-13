@@ -29,9 +29,13 @@
   }
 
   .main-slider {
-    max-width: 95%;
+    display: none;
+  }
+
+  .mobile-image-slider {
+    max-width: 75%;
     min-height: 20vh;
-    margin: auto;
+    margin-left: 6rem;
   }
 
   .test {
@@ -67,13 +71,37 @@
 
   .reservations {
     margin-top: 5rem;
-    margin-left: 2rem;
+    margin-left: 1.2rem;
+    margin-right: 1rem;
     width: 90%;
   }
 
   .my-reservations {
     margin-top: 5rem;
-    margin-left: 2rem;
+    margin-left: 1.2rem;
+    margin-right: 1rem;
+    width: 90%;
+  }
+  .card-img-top {
+    max-width: 25rem;
+    height: 15rem;
+  }
+
+  .car-desc {
+    max-width: 25rem;
+    height: 10rem;
+    overflow-y: scroll;
+  }
+
+  .car-img-details {
+    max-width: 30rem;
+    height: 25rem;
+  }
+
+  .details {
+    margin-top: 5rem;
+    margin-left: 1.2rem;
+    margin-right: 1rem;
     width: 90%;
   }
 }

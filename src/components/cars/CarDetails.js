@@ -20,7 +20,7 @@ function CarDetails() {
 
   return (
     <div className="details">
-      <img src={cars.image} className="rounded float-start" alt="..." />
+      <img src={cars.image} className="rounded float-start car-img-details" alt="..." />
       <div className="details-right">
         <h2 className="fw-bold mb-4 text-end">{cars.name}</h2>
         <div className="card  border-light detailed-card">
