@@ -156,9 +156,9 @@ npm test
 
 👤 **William Raga**
 
-- GitHub: [@William Raga](https://github.com/itsmraga-hub)
-- Twitter: [@itsmraga](https://twitter.com/itsmraga)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/itsmraga)
+- GitHub: [William Raga](https://github.com/itsmraga-hub)
+- Twitter: [William Raga](https://twitter.com/itsmraga)
+- LinkedIn: [William Raga](https://linkedin.com/in/itsmraga)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
