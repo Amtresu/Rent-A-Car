@@ -11,6 +11,7 @@ import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
 import ProtectedAdminRoutes from './components/auth/ProtectedAdminRoutes';
+import ProtectedRoutes from './components/auth/ProtectedRoutes';
 import './App.css';
 
 function App() {
@@ -27,14 +28,17 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={user.authenticated ? <Cars /> : <Navigate to="/login" />} />
-        <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Navigate to="/login" />} />
-        <Route path="/reservations" element={<MyReservations />} />
+        <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
         <Route path="/registrations" element={<Registration />} />
-        <Route path="/cars/:id" element={<CarDetails />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/" element={<Cars />} />
+          <Route path="/reserve" element={<ReserveForm />} />
+          <Route path="/reservations" element={<MyReservations />} />
+          <Route path="/cars/:id" element={<CarDetails />} />
+        </Route>
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
         <Route element={<ProtectedAdminRoutes />}>
-          <Route path="/add_car" element={user.authenticated ? <AddCarForm /> : <Navigate to="/login" />} />
+          <Route path="/add_car" element={<AddCarForm />} />
           <Route path="/delete_car" element={<DeleteCarForm />} />
         </Route>
       </Routes>
