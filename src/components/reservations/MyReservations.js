@@ -3,18 +3,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservedCarsAsync } from '../../redux/reservedCars/reservedCars';
 import MyReservation from './MyReservation';
 
-function MyReservations() {
+function MyReservations(props) {
+  const obj = props;
+  const { user } = obj;
   const reservedCars = useSelector((state) => state.reservedCars);
-  // const user = useSelector((state) => state.user);
-  console.log('This is William:', reservedCars);
+
+  console.log(user.id);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchReservedCarsAsync());
   }, []);
 
-  const filteredCars = reservedCars.filter((car) => car.reservation.user_id === 2);
-  console.log("After filter", filteredCars);
+  const filteredCars = reservedCars.filter((car) => car.reservation.user_id === user.id);
+  // console.log("After filter", filteredCars);
   return (
     <div className="reservations">
       <h2 className="fw-bold home-text ms-5"> MY RESERVATIONS</h2>
