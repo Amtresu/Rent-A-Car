@@ -32,9 +32,10 @@ function ReserveForm() {
 
   // Add form submit handler
   const handleSubmit = (e) => {
+    alert(e);
+    console.log(e.target);
     e.preventDefault();
     dispatch(reserveCarAsync(state));
-    console.log(state);
   };
 
   return (
