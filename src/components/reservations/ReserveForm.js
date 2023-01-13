@@ -51,7 +51,7 @@ function ReserveForm() {
               <div className="form-outline flex-fill mb-0">
                 <label className="form-label" htmlFor="form3Example4c">Car Name</label>
                 <select name="car_id" onChange={handleChange} className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                  <option selected>Select Vehicle Name</option>
+                  <option value="">Select Vehicle Name</option>
                   {cars.map((car) => {
                     const { id, model } = car;
                     return <option value={id} key={id}>{model}</option>;
