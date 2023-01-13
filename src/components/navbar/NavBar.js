@@ -48,8 +48,8 @@ function NavBar() {
                 </NavLink>
               </div>
 
-              <div className="container-fluid nav-link mb-1">
-                <button type="button" className="btn btn-primary" onClick={() => { handleClick(); }}>Logout</button>
+              <div className="container-fluid nav-link mt-2 ms-4">
+                <button type="button" className="btn btn-danger" onClick={() => { handleClick(); }}>Logout</button>
               </div>
 
             </div>

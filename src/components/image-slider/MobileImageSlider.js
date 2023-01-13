@@ -17,7 +17,7 @@ import {
 } from 'react-icons/fa';
 import { fetchCarsAsync } from '../../redux/cars/cars';
 
-function ImageSlider() {
+function MobileImageSlider() {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -44,7 +44,7 @@ function ImageSlider() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 4000,
@@ -62,7 +62,7 @@ function ImageSlider() {
 
   return (
 
-    <div className="main-slider">
+    <div className="mobile-image-slider">
       <h2 className="fw-bold home-text"> LATEST MODELS</h2>
       <h4 className="text-muted fw-bold select-text ">Please Select Your Preferred Car Model</h4>
 
@@ -102,4 +102,4 @@ function ImageSlider() {
   );
 }
 
-export default ImageSlider;
+export default MobileImageSlider;

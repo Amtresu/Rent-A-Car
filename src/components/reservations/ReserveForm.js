@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';

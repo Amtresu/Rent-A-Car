@@ -12,9 +12,15 @@ import MyReservations from './components/reservations/MyReservations';
 import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
+import MobileNavBar from './components/navbar/MobileNavBar';
 import ProtectedAdminRoutes from './components/auth/ProtectedAdminRoutes';
 import ProtectedRoutes from './components/auth/ProtectedRoutes';
 import './App.css';
+import './media-queries-breakpoints/Small.css';
+import './media-queries-breakpoints/Large.css';
+import './media-queries-breakpoints/XLarge.css';
+import './media-queries-breakpoints/XXLarge.css';
+import './media-queries-breakpoints/Desktop.css';
 
 function App() {
   // const navigate = useNavigate();
@@ -32,11 +38,10 @@ function App() {
     user = userState;
   }
 
-  // console.log(user);
-  // console.log(user.role.name);
   return (
     <div className="App">
       <NavBar />
+      <MobileNavBar />
       <Routes>
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
         <Route path="/registrations" element={user.authenticated ? <Navigate to="/" /> : <Registration />} />

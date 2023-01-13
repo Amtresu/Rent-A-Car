@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable default-param-last */
 import axios from 'axios';
 
@@ -17,7 +18,7 @@ export const reserveCar = (payload) => ({
   payload,
 });
 
-// Fetch Cars
+// Post Cars
 export const reserveCarAsync = (obj) => async (dispatch) => {
   const objtwo = {
     reserve_date: obj.reserve_date.slice(0, 10),

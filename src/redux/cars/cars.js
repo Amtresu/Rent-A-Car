@@ -30,7 +30,10 @@ export const deleteCars = (id) => async (dispatch) => {
     method: 'DELETE',
   });
 
-  if (response.ok) dispatch({ type: DELETE_CAR, payload: id });
+  if (response.ok) {
+    dispatch({ type: DELETE_CAR, payload: id });
+    fetchCarsAsync();
+  }
 };
 
 export const addCars = createAsyncThunk(POST_CAR, async (obj, { dispatch }) => {
