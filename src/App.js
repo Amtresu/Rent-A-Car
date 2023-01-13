@@ -10,6 +10,7 @@ import MyReservations from './components/reservations/MyReservations';
 import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
+import ProtectedAdminRoutes from './components/auth/ProtectedAdminRoutes';
 import './App.css';
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
   //   localStorage.setItem('userDetails', JSON.stringify(user));
   // });
 
+  // console.log(user.role.name);
+
   return (
     <div className="App">
       <NavBar />
@@ -27,11 +30,13 @@ function App() {
         <Route path="/" element={user.authenticated ? <Cars /> : <Navigate to="/login" />} />
         <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Navigate to="/login" />} />
         <Route path="/reservations" element={<MyReservations />} />
-        <Route path="/add_car" element={<AddCarForm />} />
-        <Route path="/delete_car" element={<DeleteCarForm />} />
         <Route path="/registrations" element={<Registration />} />
         <Route path="/cars/:id" element={<CarDetails />} />
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
+        <Route element={<ProtectedAdminRoutes />}>
+          <Route path="/add_car" element={user.authenticated ? <AddCarForm /> : <Navigate to="/login" />} />
+          <Route path="/delete_car" element={<DeleteCarForm />} />
+        </Route>
       </Routes>
     </div>
   );
