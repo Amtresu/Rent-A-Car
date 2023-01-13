@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Cars from './components/cars/Cars';
@@ -29,7 +29,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
-        <Route path="/registrations" element={<Registration />} />
+        <Route path="/registrations" element={user.authenticated ? <Navigate to="/" /> : <Registration />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="/" element={<Cars />} />
           <Route path="/reserve" element={<ReserveForm />} />
