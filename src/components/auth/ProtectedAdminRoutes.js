@@ -1,7 +1,8 @@
 import React from 'react';
 // import { useSelector } from 'react-redux';
-import { Outlet } from 'react-router';
-import Cars from '../cars/Cars';
+import { Navigate, Outlet } from 'react-router';
+import enroute from '../../enroute';
+// import Cars from '../cars/Cars';
 import Login from './Login';
 
 // const useAuth = () => {
@@ -25,7 +26,7 @@ function ProtectedAdminRoutes(props) {
   // const user = useSelector((state) => state.user);
   const isAuth = useAuth(user);
   if (user?.authenticated === true) {
-    return isAuth ? <Outlet /> : <Cars />;
+    return isAuth ? <Outlet /> : enroute();
   }
   return <Login />;
 }

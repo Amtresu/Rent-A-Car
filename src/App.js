@@ -1,5 +1,7 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import {
+  Routes, Route, Navigate, useNavigate,
+} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Cars from './components/cars/Cars';
 import NavBar from './components/navbar/NavBar';
@@ -15,8 +17,18 @@ import ProtectedRoutes from './components/auth/ProtectedRoutes';
 import './App.css';
 
 function App() {
+  // const navigate = useNavigate();
+  const notification = 'You must be an admin to add car';
+
+  // const Enroute = () => {
+
+  //   alert(notification);
+  //   navigate('/cars');
+  // }
+
   let user = JSON.parse(localStorage.getItem('userDetails'));
   const userState = useSelector((state) => state.user);
+  const cars = useSelector((state) => state.cars.cars);
   if (!user) {
     user = userState;
   }
@@ -31,7 +43,7 @@ function App() {
         <Route path="/registrations" element={user.authenticated ? <Navigate to="/" /> : <Registration />} />
         <Route element={<ProtectedRoutes user={user} />}>
           <Route path="/" element={<Cars />} />
-          <Route path="/reserve" element={<ReserveForm />} />
+          <Route path="/reserve" element={<ReserveForm cars={cars} />} />
           <Route path="/reservations" element={<MyReservations user={user} />} />
           <Route path="/cars/:id" element={<CarDetails />} />
         </Route>
