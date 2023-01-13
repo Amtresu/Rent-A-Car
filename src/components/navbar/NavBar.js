@@ -5,6 +5,11 @@ import {
 } from 'react-icons/fa';
 import Logo from '../../assets/logo.png';
 
+const handleClick = () => {
+  localStorage.clear();
+  window.location.reload();
+};
+
 function NavBar() {
   return (
     <div className="nav-side-bar">
@@ -41,6 +46,10 @@ function NavBar() {
                 <NavLink to="/delete_car" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
                   <span className="fs-5 d-none d-sm-inline ms-4 fw-bold">DELETE CAR</span>
                 </NavLink>
+              </div>
+
+              <div className="container-fluid nav-link mb-1">
+                <button type="button" className="btn btn-primary" onClick={() => { handleClick(); }}>Logout</button>
               </div>
 
             </div>
