@@ -38,7 +38,7 @@
 
 # 📖 Rent-A-Car<a name="about-project"></a>
 
-**Rent-A-Car** is a front-end web application for showing a model of cars for the public users and have a option to book an appointment for giving a trail of the car. Admins can add new cars to show-case and delete cars.
+**Rent-A-Car** is a web application for showing a model of cars for the public users and have a option to book an appointment for giving a trail of the car. Admins can add new cars to show-case and delete cars.
 
 ## 🛠 Built With <a name="built-with"></a>
 
