@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Routes>        
+      <Routes>
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
         <Route path="/registrations" element={user.authenticated ? <Navigate to="/" /> : <Registration />} />
         <Route element={<ProtectedRoutes />}>
