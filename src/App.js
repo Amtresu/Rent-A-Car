@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Routes, Route, Navigate, useNavigate,
+  Routes, Route, Navigate,
 } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Cars from './components/cars/Cars';

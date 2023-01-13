@@ -1,6 +1,6 @@
 /* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchCarsAsync } from '../../redux/cars/cars';
 import { reserveCarAsync } from '../../redux/reservations/reservations';
@@ -10,7 +10,7 @@ function ReserveForm(props) {
   const [state, setState] = useState({ car_id: 0, reserve_date: '', user_id: 1 });
 
   const { cars } = obj;
-  console.log('William Cars:', cars)
+  console.log('William Cars:', cars);
   const dispatch = useDispatch();
 
   useEffect(() => {
