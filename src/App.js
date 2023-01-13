@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -11,6 +12,8 @@ import AddCarForm from './components/reservations/AddCarForm';
 import DeleteCarForm from './components/reservations/DeleteCarForm';
 import CarDetails from './components/cars/CarDetails';
 import MobileNavBar from './components/navbar/MobileNavBar';
+import ProtectedAdminRoutes from './components/auth/ProtectedAdminRoutes';
+import ProtectedRoutes from './components/auth/ProtectedRoutes';
 import './App.css';
 import './media-queries-breakpoints/Small.css';
 import './media-queries-breakpoints/Large.css';
@@ -19,27 +22,32 @@ import './media-queries-breakpoints/XXLarge.css';
 import './media-queries-breakpoints/Desktop.css';
 
 function App() {
-  const user = useSelector((state) => state.user);
-  // console.log(user);
+  let user = JSON.parse(localStorage.getItem('userDetails'));
+  const userState = useSelector((state) => state.user);
+  if (!user) {
+    user = userState;
+  }
 
-  // useEffect(() => {
-  //   localStorage.setItem('userDetails', JSON.stringify(user));
-  // });
-
+  console.log(user);
+  console.log(user.role.name);
   return (
     <div className="App">
       <NavBar />
       <MobileNavBar />
       <Routes>
-        <Route path="/" element={user.authenticated ? <Cars /> : <Navigate to="/login" />} />
-        <Route path="/reserve" element={user.authenticated ? <ReserveForm /> : <Navigate to="/login" />} />
-        <Route path="/reservations" element={<MyReservations />} />
-        <Route path="/registrations" element={<Registration />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/add_car" element={<AddCarForm />} />
-        <Route path="/delete_car" element={<DeleteCarForm />} />
-        <Route path="/cars/:id" element={<CarDetails />} />
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
+        <Route path="/registrations" element={user.authenticated ? <Navigate to="/" /> : <Registration />} />
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/" element={<Cars />} />
+          <Route path="/reserve" element={<ReserveForm />} />
+          <Route path="/reservations" element={<MyReservations />} />
+          <Route path="/cars/:id" element={<CarDetails />} />
+        </Route>
+        <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
+        <Route element={<ProtectedAdminRoutes />}>
+          <Route path="/add_car" element={<AddCarForm />} />
+          <Route path="/delete_car" element={<DeleteCarForm />} />
+        </Route>
       </Routes>
     </div>
   );

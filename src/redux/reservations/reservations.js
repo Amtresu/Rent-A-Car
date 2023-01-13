@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable default-param-last */
 import axios from 'axios';
 
@@ -27,6 +28,7 @@ export const reserveCarAsync = (obj) => async (dispatch) => {
   const response = await axios.post(reserveCarAPI, objtwo);
   const data = await response.data;
   dispatch(reserveCar(data));
+  alert('data');
 };
 
 // Reducer

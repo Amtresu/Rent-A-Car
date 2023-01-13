@@ -60,8 +60,6 @@ function ImageSlider() {
     dispatch(fetchCarsAsync());
   }, []);
 
-  console.log(cars);
-
   return (
 
     <div className="main-slider">
