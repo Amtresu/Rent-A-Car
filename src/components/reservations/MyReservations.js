@@ -8,7 +8,7 @@ function MyReservations(props) {
   const { user } = obj;
   const reservedCars = useSelector((state) => state.reservedCars);
 
-  console.log(user.id);
+  // console.log(user.id);
   const dispatch = useDispatch();
 
   useEffect(() => {
