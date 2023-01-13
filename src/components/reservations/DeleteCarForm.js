@@ -13,9 +13,6 @@ function DeleteCarForm() {
     dispatch(fetchCarsAsync());
   }, []);
 
-  // eslint-disable-next-line no-console
-  console.log(cars);
-
   const handleSubmit = (car) => {
     dispatch(deleteCars(car.id));
     dispatch(fetchCarsAsync());

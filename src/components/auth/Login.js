@@ -1,14 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-// import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { userLogIn } from '../../redux/users/users';
 
 function Login() {
-  // const user = useSelector((state) => state.user);
-
-  // console.log(user);
   const [state, setState] = useState({
     email: '',
     password: '',
@@ -25,14 +21,8 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handleUserLogIn(state);
     dispatch(userLogIn(state));
   };
-
-  // const data = JSON.parse(localStorage.getItem('userDetails')) || {
-  //   authenticated: false,
-  // };
-  // console.log(data.authenticated);
 
   return (
     <section className="vh-100 log-in">

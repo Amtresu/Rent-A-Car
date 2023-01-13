@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable import/extensions */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
@@ -12,8 +11,6 @@ function MyReservations() {
   useEffect(() => {
     dispatch(fetchReservationsAsync());
   }, []);
-
-  console.log(reservations);
 
   return (
     <div className="my-reservations">

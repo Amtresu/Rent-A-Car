@@ -1,13 +1,7 @@
 /* eslint-disable no-console */
 import React from 'react';
-// import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router';
 import Login from './Login';
-
-// const useAuth = (obj) => {
-//   // const user = useSelector((state) => state.user);
-//   return obj && obj?.authenticated;
-// };
 
 const useAuth = (obj) => obj && obj?.authenticated;
 

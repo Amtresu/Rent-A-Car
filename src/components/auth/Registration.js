@@ -21,11 +21,8 @@ function Registration() {
     });
   };
 
-  // console.log(state);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handleUserLogIn(state);
     dispatch(userSignUp(state));
   };
 
