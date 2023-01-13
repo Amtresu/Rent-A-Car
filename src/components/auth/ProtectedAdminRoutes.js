@@ -1,6 +1,6 @@
 import React from 'react';
 // import { useSelector } from 'react-redux';
-import { Navigate, Outlet } from 'react-router';
+import { Outlet } from 'react-router';
 import enroute from '../../enroute';
 // import Cars from '../cars/Cars';
 import Login from './Login';

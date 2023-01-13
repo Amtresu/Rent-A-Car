@@ -18,7 +18,6 @@ import './App.css';
 
 function App() {
   // const navigate = useNavigate();
-  const notification = 'You must be an admin to add car';
 
   // const Enroute = () => {
 
