@@ -167,7 +167,7 @@ npm test
 
 - As a Admin add car/cars to show-case
 - As a Admin delete car/cars from show-case
-- As a public user, can see all cars in the show-case
+- As a logged in user, can see all cars in the show-case
 - As a registerd user, can book an appointmnet for making a car/cars for trails
 - As a registerd user, Can cancel appointment
 
