@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -28,8 +27,6 @@ function App() {
     user = userState;
   }
 
-  console.log(user);
-  console.log(user.role.name);
   return (
     <div className="App">
       <NavBar />
