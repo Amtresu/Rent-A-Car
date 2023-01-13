@@ -15,15 +15,14 @@ import ProtectedRoutes from './components/auth/ProtectedRoutes';
 import './App.css';
 
 function App() {
-  const user = useSelector((state) => state.user);
-  // console.log(user);
+  let user = JSON.parse(localStorage.getItem('userDetails'));
+  const userState = useSelector((state) => state.user);
+  if (!user) {
+    user = userState;
+  }
 
-  // useEffect(() => {
-  //   localStorage.setItem('userDetails', JSON.stringify(user));
-  // });
-
-  // console.log(user.role.name);
-
+  console.log(user);
+  console.log(user.role.name);
   return (
     <div className="App">
       <NavBar />
