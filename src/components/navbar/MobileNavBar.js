@@ -5,6 +5,11 @@ import {
 } from 'react-icons/fa';
 import Logo from '../../assets/logo.png';
 
+const handleClick = () => {
+  localStorage.clear();
+  window.location.reload();
+};
+
 function MobileNavBar() {
   return (
     <div className="mobile-nav-bar">
@@ -50,6 +55,11 @@ function MobileNavBar() {
                 </ul>
 
               </div>
+
+              <div className="container-fluid nav-link mt-1 ms-3">
+                <button type="button" className="btn btn-danger" onClick={() => { handleClick(); }}>Logout</button>
+              </div>
+
               <div className="container-fluid mb-5 mobile-footer">
                 <div className="d-flex justify-content-between me-5 ms-5">
                   <a href="/socials" className="list-group-item list-group-item-action">

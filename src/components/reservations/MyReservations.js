@@ -18,7 +18,7 @@ function MyReservations() {
   return (
     <div className="my-reservations">
       <h2 className="fw-bold ms-5"> MY RESERVATIONS</h2>
-      <div className="table-responsive ">
+      <div className="table-responsive min-vh-100">
         {reservations.map((reserved) => (
           <table className="table table-striped-columns table-bordered" key={reserved.id}>
             <thead>
