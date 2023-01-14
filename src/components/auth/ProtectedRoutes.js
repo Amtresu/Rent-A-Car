@@ -9,7 +9,7 @@ const ProtectedRoutes = (props) => {
   const obj = props;
   const { user } = obj;
   const isAuth = useAuth(user);
-  console.log(isAuth);
+
   return isAuth ? <Outlet /> : <Login />;
 };
 
