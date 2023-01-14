@@ -30,7 +30,6 @@ export const userSignUp = createAsyncThunk(SIGN_UP, async (obj, { dispatch }) =>
     return data;
   }).catch((error) => {
     const err = error;
-    // console.log('error:', err);
     return err;
   });
 });
@@ -51,11 +50,9 @@ export const userLogIn = createAsyncThunk(SIGN_IN, async (obj, { dispatch }) => 
       },
     });
     localStorage.setItem('userDetails', JSON.stringify({ ...data.data.data, authenticated: true }));
-    // console.log('Data: ', data.data.data);
     return data;
   }).catch((error) => {
     const err = error;
-    // console.log('error:', err);
     return err;
   });
 });
@@ -68,11 +65,9 @@ const initialState = {
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case SIGN_UP:
-      // console.log(action);
       return { ...action.payload };
 
     case SIGN_IN:
-      // console.log(action);
       return { ...action.payload };
 
     default:
