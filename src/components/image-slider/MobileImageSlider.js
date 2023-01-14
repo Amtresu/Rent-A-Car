@@ -17,7 +17,7 @@ import {
 } from 'react-icons/fa';
 import { fetchCarsAsync } from '../../redux/cars/cars';
 
-function MobileImageSlider() {
+const MobileImageSlider = () => {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -100,6 +100,6 @@ function MobileImageSlider() {
       </Slider>
     </div>
   );
-}
+};
 
 export default MobileImageSlider;

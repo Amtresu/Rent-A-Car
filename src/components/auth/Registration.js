@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { userSignUp } from '../../redux/users/users';
 
-function Registration() {
+const Registration = () => {
   const [state, setState] = useState({
     email: '',
     username: '',
@@ -144,6 +144,6 @@ function Registration() {
 
     </div>
   );
-}
+};
 
 export default Registration;

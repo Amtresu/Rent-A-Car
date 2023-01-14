@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FaTrash } from 'react-icons/fa';
 import { fetchCarsAsync, deleteCars } from '../../redux/cars/cars';
 
-function DeleteCarForm() {
+const DeleteCarForm = () => {
   const { cars } = useSelector((state) => state.cars);
 
   const dispatch = useDispatch();
@@ -58,5 +58,6 @@ function DeleteCarForm() {
       </div>
     </div>
   );
-}
+};
+
 export default DeleteCarForm;

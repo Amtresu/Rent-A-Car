@@ -10,7 +10,7 @@ const useAuth = (user) => {
   return false;
 };
 
-function ProtectedAdminRoutes(props) {
+const ProtectedAdminRoutes = (props) => {
   const obj = props;
   const { user } = obj;
   const isAuth = useAuth(user);
@@ -18,6 +18,6 @@ function ProtectedAdminRoutes(props) {
     return isAuth ? <Outlet /> : enroute();
   }
   return <Login />;
-}
+};
 
 export default ProtectedAdminRoutes;

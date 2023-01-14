@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MyReservation(props) {
+const MyReservation = (props) => {
   const obj = props;
   const {
     model, mfgDate, image, description,
@@ -14,6 +14,6 @@ function MyReservation(props) {
       <p>{description}</p>
     </div>
   );
-}
+};
 
 export default MyReservation;

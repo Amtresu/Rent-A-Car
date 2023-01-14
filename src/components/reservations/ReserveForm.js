@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { fetchCarsAsync } from '../../redux/cars/cars';
 import { reserveCarAsync } from '../../redux/reservations/reservations';
 
-function ReserveForm(props) {
+const ReserveForm = (props) => {
   const obj = props;
   const [state, setState] = useState({ car_id: 0, reserve_date: '', user_id: 1 });
 
@@ -90,6 +90,6 @@ function ReserveForm(props) {
 
     </div>
   );
-}
+};
 
 export default ReserveForm;

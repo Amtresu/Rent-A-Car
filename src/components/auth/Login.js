@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { userLogIn } from '../../redux/users/users';
 
-function Login() {
+const Login = () => {
   const [state, setState] = useState({
     email: '',
     password: '',
@@ -96,5 +96,6 @@ function Login() {
       </div>
     </section>
   );
-}
+};
+
 export default Login;

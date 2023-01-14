@@ -17,7 +17,7 @@ function MyReservations() {
       <h2 className="fw-bold ms-5"> MY RESERVATIONS</h2>
       <div className="table-responsive min-vh-100">
         {reservations.map((reserved) => (
-          <table className="table table-striped-columns table-bordered" key={reserved.id}>
+          <table className="table table-striped-columns table-bordered" key={`key-${reserved.id}-${reserved.reservation.id}`}>
             <thead>
               <tr>
                 <th scope="col">#</th>
