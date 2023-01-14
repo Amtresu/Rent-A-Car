@@ -115,11 +115,6 @@ To run the project, execute the following command from the root directory:
   npm start
 ```
 
-### Run tests
-````sh
-npm test
-````
-
 ### Deployment
 
 - This app is not deployed yet
