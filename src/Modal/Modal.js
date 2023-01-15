@@ -1,9 +1,9 @@
-import React from 'react';
 import './Modal.css';
 
 const Modal = (props) => {
   const obj = props;
   const { show, onClose } = obj;
+
   if (!show) {
     return null;
   }
