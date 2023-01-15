@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import enroute from '../../enroute';
+import Enroute from '../../Enroute';
 import Login from './Login';
 
 const useAuth = (user) => {
@@ -15,7 +15,7 @@ const ProtectedAdminRoutes = (props) => {
   const { user } = obj;
   const isAuth = useAuth(user);
   if (user?.authenticated === true) {
-    return isAuth ? <Outlet /> : enroute();
+    return isAuth ? <Outlet /> : Enroute();
   }
   return <Login />;
 };
