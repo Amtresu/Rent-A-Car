@@ -8,8 +8,13 @@ const Enroute = () => {
 
   return (
     <>
-      <Modal onClose={() => setShow(false)} show={show} />
-      {navigate('/')}
+      <Modal
+        onClose={() => {
+          setShow(false);
+          navigate('/');
+        }}
+        show={show}
+      />
     </>
   );
 };
