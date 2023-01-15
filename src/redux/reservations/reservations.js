@@ -3,7 +3,6 @@
 import axios from 'axios';
 
 // const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
-// const reserveCarAPI = 'http://localhost:3000/reservations';
 
 // Actions
 const RESERVE_CAR = 'RESERVE_CAR';
@@ -26,7 +25,7 @@ export const reserveCarAsync = (obj) => async (dispatch) => {
     user_id: obj.user_id,
   };
   const id = JSON.parse(localStorage.getItem('userDetails')).id.toString();
-  const api = `http://localhost:3000/users/${id}/reservations`;
+  const api = `https://final-capstone-api.onrender.com/users/${id}/reservations`;
   const response = await axios.post(api, { ...objtwo });
   const data = await response.data;
   dispatch(reserveCar(data));
