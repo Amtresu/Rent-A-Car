@@ -1,12 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// const LOGIN_API = 'http://127.0.0.1:3000/login';
 const LOGIN_API = 'https://final-capstone-api.onrender.com/login';
-// const SIGN_UP_API = 'http://127.0.0.1:3000/signup';
 const SIGN_UP_API = 'https://final-capstone-api.onrender.com/signup';
-
-// const initialState = {};
 
 const SIGN_UP = 'SIGN_UP';
 const SIGN_IN = 'SIGN_IN';
