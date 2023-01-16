@@ -2,8 +2,7 @@
 /* eslint-disable default-param-last */
 import axios from 'axios';
 
-const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
-// const reserveCarAPI = 'http://localhost:3000/reservations';
+// const reserveCarAPI = 'https://final-capstone-api.onrender.com/reservations';
 
 // Actions
 const RESERVE_CAR = 'RESERVE_CAR';
@@ -25,10 +24,11 @@ export const reserveCarAsync = (obj) => async (dispatch) => {
     car_id: +obj.car_id,
     user_id: obj.user_id,
   };
-  const response = await axios.post(reserveCarAPI, objtwo);
+  const id = JSON.parse(localStorage.getItem('userDetails')).id.toString();
+  const api = `https://final-capstone-api.onrender.com/users/${id}/reservations`;
+  const response = await axios.post(api, { ...objtwo });
   const data = await response.data;
   dispatch(reserveCar(data));
-  alert('data');
 };
 
 // Reducer

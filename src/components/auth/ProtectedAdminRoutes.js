@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import enroute from '../../enroute';
+import Enroute from '../../Enroute';
 import Login from './Login';
 
 const useAuth = (user) => {
@@ -10,14 +10,14 @@ const useAuth = (user) => {
   return false;
 };
 
-function ProtectedAdminRoutes(props) {
+const ProtectedAdminRoutes = (props) => {
   const obj = props;
   const { user } = obj;
   const isAuth = useAuth(user);
   if (user?.authenticated === true) {
-    return isAuth ? <Outlet /> : enroute();
+    return isAuth ? <Outlet /> : Enroute();
   }
   return <Login />;
-}
+};
 
 export default ProtectedAdminRoutes;

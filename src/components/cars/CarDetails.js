@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-function CarDetails() {
+const CarDetails = () => {
   const [cars, setCars] = useState({});
 
   const { id } = useParams();
@@ -37,6 +37,6 @@ function CarDetails() {
       </div>
     </div>
   );
-}
+};
 
 export default CarDetails;

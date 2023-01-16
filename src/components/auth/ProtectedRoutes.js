@@ -5,12 +5,12 @@ import Login from './Login';
 
 const useAuth = (obj) => obj && obj?.authenticated;
 
-function ProtectedRoutes(props) {
+const ProtectedRoutes = (props) => {
   const obj = props;
   const { user } = obj;
   const isAuth = useAuth(user);
-  console.log(isAuth);
+
   return isAuth ? <Outlet /> : <Login />;
-}
+};
 
 export default ProtectedRoutes;

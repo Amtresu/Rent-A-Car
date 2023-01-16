@@ -1,18 +1,16 @@
-/* eslint-disable no-console */
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint jsx-a11y/label-has-associated-control: ["error", { assert: "either" } ] */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { fetchCarsAsync } from '../../redux/cars/cars';
 import { reserveCarAsync } from '../../redux/reservations/reservations';
 
-function ReserveForm(props) {
+const ReserveForm = (props) => {
   const obj = props;
   const [state, setState] = useState({ car_id: 0, reserve_date: '', user_id: 1 });
 
   const { cars } = obj;
-  console.log('William Cars:', cars);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -90,6 +88,6 @@ function ReserveForm(props) {
 
     </div>
   );
-}
+};
 
 export default ReserveForm;

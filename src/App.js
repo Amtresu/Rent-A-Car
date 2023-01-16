@@ -22,15 +22,7 @@ import './media-queries-breakpoints/XLarge.css';
 import './media-queries-breakpoints/XXLarge.css';
 import './media-queries-breakpoints/Desktop.css';
 
-function App() {
-  // const navigate = useNavigate();
-
-  // const Enroute = () => {
-
-  //   alert(notification);
-  //   navigate('/cars');
-  // }
-
+const App = () => {
   let user = JSON.parse(localStorage.getItem('userDetails'));
   const userState = useSelector((state) => state.user);
   const cars = useSelector((state) => state.cars.cars);
@@ -59,6 +51,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
