@@ -32,7 +32,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar />
+      {user.authenticated ? <NavBar /> : null}
+      {user.authenticated ? <MobileNavBar /> : null}
       <MobileNavBar />
       <Routes>
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
