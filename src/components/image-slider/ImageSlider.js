@@ -18,7 +18,7 @@ import {
 import { fetchCarsAsync } from '../../redux/cars/cars';
 
 const ImageSlider = () => {
-  function SampleNextArrow(props) {
+  const SampleNextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
       <div
@@ -27,9 +27,9 @@ const ImageSlider = () => {
         onClick={onClick}
       />
     );
-  }
+  };
 
-  function SamplePrevArrow(props) {
+  const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
       <div
@@ -38,7 +38,7 @@ const ImageSlider = () => {
         onClick={onClick}
       />
     );
-  }
+  };
 
   const settings = {
     dots: true,

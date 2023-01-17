@@ -22,7 +22,7 @@ const Enroute = () => {
       document.body.addEventListener('keydown', esc);
     }
 
-    return function cleanup() {
+    return () => {
       document.body.removeEventListener('keydown', esc);
     };
   });
