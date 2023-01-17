@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchReservationsAsync } from '../../redux/reservations/myReservations';
 
-function MyReservations() {
+const MyReservations = () => {
   const { reservations } = useSelector((state) => state.reserved);
   const dispatch = useDispatch();
 
@@ -39,6 +39,6 @@ function MyReservations() {
       </div>
     </div>
   );
-}
+};
 
 export default MyReservations;
