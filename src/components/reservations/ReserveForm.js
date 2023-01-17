@@ -37,8 +37,8 @@ const ReserveForm = (props) => {
   // Add form submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/reservations');
     dispatch(reserveCarAsync(state));
+    navigate('/reservations');
   };
 
   return (
