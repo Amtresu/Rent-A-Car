@@ -34,7 +34,6 @@ const App = () => {
     <div className="App">
       {user.authenticated ? <NavBar /> : null}
       {user.authenticated ? <MobileNavBar /> : null}
-      <MobileNavBar />
       <Routes>
         <Route path="/login" element={user.authenticated ? <Navigate to="/" /> : <Login />} />
         <Route path="/registrations" element={user.authenticated ? <Navigate to="/" /> : <Registration />} />
