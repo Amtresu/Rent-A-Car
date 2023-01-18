@@ -9,7 +9,7 @@ const MobileNavBar = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/');
+    navigate('/login');
     localStorage.clear();
     window.location.reload();
   };
