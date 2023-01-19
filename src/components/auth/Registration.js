@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { userSignUp } from '../../redux/users/users';
 
-function Registration() {
+const Registration = () => {
   const [state, setState] = useState({
     email: '',
     username: '',
@@ -21,19 +21,16 @@ function Registration() {
     });
   };
 
-  // console.log(state);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handleUserLogIn(state);
     dispatch(userSignUp(state));
   };
 
   return (
     <div className="registration">
       <nav className="navbar">
-        <div className="row col-12 d-flex justify-content-center text-white">
-          <h2>Registration</h2>
+        <div className="row col-12 d-flex justify-content-center ms-5">
+          <h2 className="fw-bold">Registration</h2>
         </div>
       </nav>
       <section className="vh-100">
@@ -147,6 +144,6 @@ function Registration() {
 
     </div>
   );
-}
+};
 
 export default Registration;

@@ -6,12 +6,16 @@ import {
   applyMiddleware,
 } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import carReducer from './cars/car';
 import usersReducer from './users/users';
+import carsReducer from './cars/cars';
+import reservationReducer from './reservations/reservations';
+import myReservationsReducer from './reservations/myReservations';
 
 const rootReducer = combineReducers({
-  car: carReducer,
   user: usersReducer,
+  cars: carsReducer,
+  reserve: reservationReducer,
+  reserved: myReservationsReducer,
 });
 
 const store = configureStore({ reducer: rootReducer }, applyMiddleware(thunk));

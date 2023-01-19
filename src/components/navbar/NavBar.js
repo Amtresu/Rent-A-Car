@@ -1,11 +1,19 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import {
   FaTwitter, FaVimeoV, FaPinterest, FaFacebook, FaGooglePlus,
 } from 'react-icons/fa';
 import Logo from '../../assets/logo.png';
 
-function NavBar() {
+const NavBar = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/');
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
     <div className="nav-side-bar">
       <div className="container-fluid">
@@ -43,6 +51,10 @@ function NavBar() {
                 </NavLink>
               </div>
 
+              <div className="container-fluid nav-link mt-2 ms-4">
+                <button type="button" className="btn btn-danger" onClick={() => { handleClick(); }}>Logout</button>
+              </div>
+
             </div>
             <div className="container-fluid mb-5">
               <div className="d-flex justify-content-between me-5 ms-5">
@@ -73,6 +85,6 @@ function NavBar() {
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;
